@@ -10,9 +10,18 @@ export class AddressCardComponent implements OnInit {
   user: any;
   // tslint:disable-next-line:no-input-rename
   @Input('name') userName: string;
+  isCollapsed = true;
 
   constructor() {
 
+  }
+
+  toggleCollapse() {
+    if (this.isCollapsed) {
+      this.isCollapsed = false;
+    } else {
+      this.isCollapsed = true;
+    }
   }
 
   ngOnInit() {
