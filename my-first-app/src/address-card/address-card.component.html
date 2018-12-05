@@ -5,12 +5,12 @@
   <h3>{{user.secondsector}}</h3>
    <p class="title">{{user.title}}</p>
 
-<button (click)="toggleCollapse()">Expand/Collaps</button>
+<button (click)="toggleCollapse()">Expand/Collapse</button>
 <div *ngIf="!isCollapsed">
    <p class= "address"> {{user.address}}</p>
   <div *ngIf="user.cell.length">
     <p class="cell">Cell:</p>
-    <p *ngFor="let phoneNumber of user.cell">{{phoneNumber}}</p>
+    <p class="cell" *ngFor="let phoneNumber of user.cell">{{phoneNumber}}</p>
   </div>
 </div>
 
