@@ -5,7 +5,8 @@
   <h3>{{user.secondsector}}</h3>
    <p class="title">{{user.title}}</p>
 
-<button (click)="toggleCollapse()">Expand/Collapse</button>
+<button *ngIf="isCollapsed" (click)="toggleCollapse()">Expand</button>
+<button *ngIf="!isCollapsed" (click)="toggleCollapse()">Collapse</button>
 <div *ngIf="!isCollapsed">
    <p class= "address"> {{user.address}}</p>
   <div *ngIf="user.cell.length">
